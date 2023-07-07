@@ -13,5 +13,6 @@ if (!empty($_POST["submit"])){
 
    header("Location: sent.html");
    exit();
+   echo("Email submited");
 }
 ?>
