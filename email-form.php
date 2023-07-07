@@ -11,8 +11,5 @@ if (!empty($_POST["submit"])){
     "\r\n Email: " . $email . 
     "\r\n Message: " . $message . "\r\n";
 
-   header("Location: sent.html");
-   exit();
-   echo("Email submited");
 }
 ?>
