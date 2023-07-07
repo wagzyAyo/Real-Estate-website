@@ -15,7 +15,7 @@ body {
     background-color: #fff;
     height: 60px;
     position: fixed;
-    z-index: 100;
+    z-index: 1;
     top: 0;
 }
 
@@ -23,6 +23,10 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 10px 5%;
+}
+
+.nav-links {
+    display: none;
 }
 
 .nav img {
@@ -64,6 +68,7 @@ li a:hover {
     border-radius: 10px;
     cursor: pointer;
     transition: 900ms ease-in-out;
+    outline: none;
 }
 
 .sec-btn:hover,
@@ -98,7 +103,12 @@ li a:hover {
         cursor: pointer;
     }
 
+    .desk-link {
+        display: none;
+    }
+
     .nav-links {
+        display: block;
         width: 600px;
         height: 100vh;
         background-color: #3E3E94;

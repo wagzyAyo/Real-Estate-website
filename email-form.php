@@ -4,7 +4,6 @@ if (!empty($_POST["submit"])){
     $email = $_POST["email"];
     $message = $_POST["message"];
     $toEmail = "talktojmcvibes@gmail.com";
-    $fromEmail = $_POST["email"];
 
 
     $mailHeaders = "Name:" . $name . 
