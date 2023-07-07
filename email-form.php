@@ -12,5 +12,6 @@ if (!empty($_POST["submit"])){
     "\r\n Message: " . $message . "\r\n";
 
    header("Location: sent.html");
+   exit();
 }
 ?>
