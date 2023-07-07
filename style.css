@@ -184,6 +184,7 @@ li a:hover {
     font-weight: 700;
     cursor: pointer;
     transition: 2s ease-in-out;
+    outline: none;
 }
 
 .left-hero a {
@@ -622,6 +623,11 @@ button a:hover {
 .button {
     display: grid;
     place-content: center;
+}
+
+.button a {
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .new-btn {
