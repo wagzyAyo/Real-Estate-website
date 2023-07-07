@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adimula Global Services</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css" integrity="sha512-yDUXOUWwbHH4ggxueDnC5vJv4tmfySpVdIcN1LksGZi8W8EVZv4uKGrQc0pVf66zS7LDhFJM7Zdeow1sw1/8Jw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+     <!-------------------This is the navbar section--------------------------->
+     <section class="nav-bar">
+        <div class="nav">
+          <div class="logo"> <a href="index.html"> <img src="assets/logo.png"  alt="logo" style="height: 34px; width: 64px;" > 
+          </a> </div> 
+            <div class="nav-links " id="navMenu">
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-xmark" onclick="closeMenu()" id="close"></i>
+                        <a href="">Buy</a>
+                        <a href="">Sell</a>
+                        <a href="">Lease</a>
+                        <a href="about.html">About</a>
+                        <a href="" ><button class="sec-btn focus" >Contact Us</button></a>
+                    </li>
+                </ul>
+               
+            </div>
+            <div class="menu">
+            <i class="fa-solid fa-bars" onclick="openMenu()" id="open"></i>
+        </div>
+        </div>
+
+    </section>
+
+    <!-------------------------------------Contact Us Section--------------------------->
+ <section class="contact">
+    <div class="flex">
+
+        <div class="left-flex">
+    <div class="title">
+        <h3>Easy to <span> contact us </span></h3>
+    </div>
+
+    <p>Is there problem finding your dream home ? Need a guide in buying your first home ? or need a consultation 
+        on residential issues ? just contact us</p>
+
+        <div class="grid">
+            <div class="call"> 
+                <div class="call-flex">
+                <div>
+                    <img src="assets/222.png" alt="" style="width:45px; height: 16px;">
+            </div>
+
+            <div class="details">
+                <h3>Call</h3>
+                <p>08132477594</p>
+            </div>
+        </div>
+            <div class="button">
+                <a href="" ><button class="new-btn focus" >Call now</button></a>
+            </div>
+            </div>
+
+
+            <div class="chat"> 
+                <div class="call-flex">
+                <div>
+                    <img src="assets/5555.png" alt="" style="width:29px; height: 29px;">
+            </div>
+
+            <div class="details">
+                <h3>Chat</h3>
+                <p>08132477594</p>
+            </div>
+        </div>
+            <div class="button">
+                <a href="" ><button class="new-btn focus" >Chat now</button></a>
+            </div>
+            </div>
+
+            <div class="call"> 
+                <div class="call-flex">
+                <div>
+                    <img src="assets/1111.png" alt="" style="width:30px; height: 20px;">
+            </div>
+
+            <div class="details">
+                <h3>Video Call</h3>
+                <p>08132477594</p>
+            </div>
+        </div>
+            <div class="button">
+                <a href="" ><button class="new-btn focus" >Call now</button></a>
+            </div>
+            </div>
+
+
+            <div class="chat"> 
+                <div class="call-flex">
+                <div>
+                    <img src="assets/444.png" alt="" style="width:37px; height: 33px;">
+            </div>
+
+            <div class="details">
+                <h3>Message</h3>
+                <p>08132477594</p>
+            </div>
+        </div>
+            <div class="button">
+                <a href="" ><button class="new-btn focus" >Message now</button></a>
+            </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    <div class="right-flex">
+        <img src="assets/OIP (3).jfif" alt="" >
+    </div>
+</div>
+ </section>
+ <!--------------------------------------form section-------------------------->
+<section>
+    <div class="title">
+        <h3>Send Us <span>Email</span></h3>
+        </div>
+ <div class="form">
+
+    <form  method="post" action="email-form.php">
+        <label for="name"> Name</label>
+        <input type="text" name="name" placeholder="Your name ..." id="name" class="label" required>
+        <br>
+        <label for="email"> Email</label>
+        <input type="email" name="email" placeholder="Your email address..." id="email" class="label" required>
+        <br>
+        <label for="message"> Message</label>
+        <textarea name="message" id="message" cols="40" rows="10"  placeholder="Your message here..." required></textarea>
+        <br>
+        <div class="button">
+            <input type="submit" name="submit" value="send message" class="new-btn focus"  >
+           
+        </div>
+    </form>
+</div>
+</section>
+    <section class="footer">
+        <div class="flex ">
+            <img src="assets/toppng.com-facebook-logo-white-501x425.png" alt="" style="width: 50px; height: auto;">
+            <img src="assets/new-Instagram-logo-white-glyph-1200x1199.png" alt="" style="width:34px; height: auto;">
+            <img src="assets/—Pngtree—twitter white icon_3570409.png" alt="" style="width:50px; height:auto">
+            
+        </div>
+             
+        <p>Copyright (c) 2023</p>
+     </section> 
+</body>
+<script src="jquery.js" type="text/javascript " lang="text/javascript"></script> 
+<script src="jq.js" type="text/javascript " lang="text/javascript"></script>
+</html>
