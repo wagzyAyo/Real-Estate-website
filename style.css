@@ -694,3 +694,54 @@ form .label {
         border: none;
     }
 }
+
+/*Styles for animate */
+.title-animate,
+.title-animate01,
+.title-animate02,
+.title-animate03,
+.about-para,
+.about-para1,
+.sell,
+.buy.animate__animated,
+.negotiation,
+.expert,
+.documentation,
+.buying,
+.selling,
+.contact-board,
+.image {
+    opacity: 0;
+}
+
+.title-animate.animate__animated,
+.title-animate01.animate__animated,
+.title-animate02.animate__animated,
+.title-animate03.animate__animated,
+.about-para.animate__animated,
+.about-para1.animate__animated,
+.sell.animate__animated,
+.buy.animate__animated,
+.negotiation.animate__animated,
+.expert.animate__animated,
+.documentation.animate__animated,
+.buying.animate__animated,
+.selling.animate__animated,
+.contact-board.animate__animated,
+.image.animate__animated {
+    opacity: 1;
+
+}
+
+.buy,
+.expert,
+.buying,
+.image,
+.about-para1 {
+    animation-delay: 300ms;
+}
+
+.evaluate,
+.documentation {
+    animation-delay: 600ms;
+}

@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css" integrity="sha512-yDUXOUWwbHH4ggxueDnC5vJv4tmfySpVdIcN1LksGZi8W8EVZv4uKGrQc0pVf66zS7LDhFJM7Zdeow1sw1/8Jw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 </head>
 <body>
      <!-------------------This is the navbar section--------------------------->
@@ -55,7 +59,7 @@
 
         <div class="left-flex">
     <div class="title">
-        <h3>Easy to <span> contact us </span></h3>
+        <h3 class="title-animate">Easy to <span> contact us </span></h3>
     </div>
 
     <p>Is there problem finding your dream home ? Need a guide in buying your first home ? or need a consultation 
@@ -143,7 +147,7 @@
  <!--------------------------------------form section-------------------------->
 <section>
     <div class="title">
-        <h3>Send Us <span>Email</span></h3>
+        <h3 class="title-animate01">Send Us <span>Email</span></h3>
         </div>
  <div class="form">
 
@@ -153,6 +157,9 @@
         <br>
         <label for="email"> Email</label>
         <input type="email" name="email" placeholder="Your email address..." id="email" class="label" required>
+        <br>
+        <label for="name"> Subject</label>
+        <input type="text" name="subject" placeholder="Your message titlte ..." id="name" class="label" required>
         <br>
         <label for="message"> Message</label>
         <textarea name="message" id="message" cols="40" rows="10"  placeholder="Your message here..." required></textarea>
@@ -177,4 +184,5 @@
 </body>
 <script src="jquery.js" type="text/javascript " lang="text/javascript"></script> 
 <script src="jq.js" type="text/javascript " lang="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js" integrity="sha512-ZKNVEa7gi0Dz4Rq9jXcySgcPiK+5f01CqW+ZoKLLKr9VMXuCsw3RjWiv8ZpIOa0hxO79np7Ec8DDWALM0bDOaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </html>
