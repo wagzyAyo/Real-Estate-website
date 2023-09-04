@@ -176,6 +176,10 @@ li a:hover {
     z-index: 2;
 }
 
+.hero-text span {
+    color: #02AFF3;
+}
+
 .text {
     margin-top: 30px;
     display: grid;
@@ -703,7 +707,8 @@ form .label {
 .about-para,
 .about-para1,
 .sell,
-.buy.animate__animated,
+.buy,
+.evaluate,
 .negotiation,
 .expert,
 .documentation,
