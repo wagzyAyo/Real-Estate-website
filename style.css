@@ -1,7 +1,9 @@
 :root{
     --bgColor: #fff;
 
-    --flex-display: flex
+    --flex-display: flex;
+
+    --no-border: none;
 
     --list-style: none;
 }
@@ -206,6 +208,7 @@ li a:hover {
     font-weight: 700;
     cursor: pointer;
     transition: 2s ease-in-out;
+    border: var(--no-border);
     outline: none;
 }
 
