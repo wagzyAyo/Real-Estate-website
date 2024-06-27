@@ -1,3 +1,11 @@
+:root{
+    --bgColor: #fff;
+
+    --flex-display: flex
+
+    --list-style: none;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +20,7 @@ body {
 
 .nav-bar {
     width: 100vw;
-    background-color: #fff;
+    background-color: var(--bgColor);
     height: 60px;
     position: fixed;
     z-index: 1;
@@ -20,7 +28,7 @@ body {
 }
 
 .nav {
-    display: flex;
+    display: var(--flex-display);
     justify-content: space-between;
     padding: 10px 5%;
 }
