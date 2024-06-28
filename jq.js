@@ -72,8 +72,8 @@ $(document).ready(function () {
 
 });
 function openMenu() {
-    $("#navMenu").css('left', '100px')
+    $("#navMenu").css('left', '200px')
 }
 function closeMenu() {
-    $("#navMenu").css('left', '650px')
+    $("#navMenu").css('left', '900px')
 }
