@@ -2,6 +2,12 @@
     --bgColor: #fff;
 
     --flex-display: flex;
+    --grid-display: grid;
+    --inherit-display: inherit;
+    --block-display: block;
+    --no-display:  none;
+
+    --cursor: pointer;
 
     --no-border: none;
 
@@ -36,7 +42,7 @@ body {
 }
 
 .nav-links {
-    display: none;
+    display: var(--no-display);
 }
 
 .nav img {
@@ -76,7 +82,7 @@ li a:hover {
     background-color: transparent;
     border: 1px solid #000000;
     border-radius: 10px;
-    cursor: pointer;
+    cursor: var(--cursor);
     transition: 900ms ease-in-out;
     outline: none;
 }
@@ -85,7 +91,7 @@ li a:hover {
 .focus {
     background-color: #000000;
     color: #FFF;
-    border: none;
+    border: var(--no-border);
 }
 
 .nav .fa-solid {
@@ -93,11 +99,11 @@ li a:hover {
 }
 
 .menu {
-    display: none;
+    display: var(--no-display);
 }
 
 .nav .fa-solid {
-    display: none;
+    display: var(--no-display);
 }
 
 @media(max-width:900px) {
@@ -114,11 +120,11 @@ li a:hover {
     }
 
     .desk-link {
-        display: none;
+        display: var(--no-display);
     }
 
     .nav-links {
-        display: block;
+        display: var(--block-display);
         width: 600px;
         height: 100vh;
         background-color: #3E3E94;
@@ -134,7 +140,7 @@ li a:hover {
 
     .nav-links ul li a {
         color: #FFF;
-        display: block;
+        display: var(--block-display);
         padding: 25px 10%;
     }
 
@@ -144,13 +150,13 @@ li a:hover {
     }
 
     .menu {
-        display: block;
+        display: var(--block-display);
     }
 }
 
 /* hero Section*/
 .hero-section {
-    display: flex;
+    display: var(--flex-display);
     align-items: flex-start;
     background-color: #000000;
     width: 100vw;
@@ -201,12 +207,12 @@ li a:hover {
     border-radius: 10px;
     background: #FFF;
     box-shadow: 0px 5px 15px 0px rgba(37, 44, 97, 0.15), 0px 2px 4px 0px rgba(136, 144, 194, 0.20);
-    display: flex;
+    display: var(--flex-display);
     justify-content: center;
     align-items: center;
     margin-top: 30px;
     font-weight: 700;
-    cursor: pointer;
+    cursor: var(--cursor);
     transition: 2s ease-in-out;
     border: var(--no-border);
     outline: none;
@@ -225,7 +231,7 @@ button a:hover {
 
 .testimony {
     margin-top: 30px;
-    display: flex;
+    display: var(--flex-display);
     justify-content: space-between;
 }
 
@@ -274,7 +280,7 @@ button a:hover {
 
 .serv-sell .top-flex,
 .serv-buy-rent .top-flex {
-    display: flex;
+    display: var(--flex-display);
     justify-content: space-around;
     align-items: flex-start;
     margin-bottom: 12px;
@@ -345,7 +351,7 @@ button a:hover {
 }
 
 .display {
-    display: flex;
+    display: var(--flex-display);
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
@@ -435,14 +441,14 @@ button a:hover {
     border-radius: 30px;
     margin-inline: auto;
     margin-top: 55px;
-    display: flex;
+    display: var(--flex-display);
     padding: 0 5%;
     justify-content: space-between;
 }
 
 .glass {
-    display: flex;
-    width: 193px;
+    display: ;
+    width: 193px;var(--flex-display)
     height: 157px;
     padding: 13px 10px;
     flex-direction: column;
@@ -478,7 +484,7 @@ button a:hover {
     height: 59px;
     border: 1px solid #fff;
     border-radius: 50%;
-    display: flex;
+    display: var(--flex-display);
     justify-content: center;
     align-items: center;
 }
@@ -488,7 +494,7 @@ button a:hover {
     height: 45px;
     border: 1px solid #fff;
     border-radius: 50%;
-    display: flex;
+    display: var(--flex-display);
     justify-content: center;
     align-items: center;
 }
@@ -498,7 +504,7 @@ button a:hover {
     height: 33px;
     border: 1px solid #fff;
     border-radius: 50%;
-    display: flex;
+    display: var(--flex-display);
     justify-content: center;
     align-items: center;
 }
@@ -508,7 +514,7 @@ button a:hover {
     height: 20px;
     background-color: #FFF;
     border-radius: 50%;
-    display: flex;
+    display: var(--flex-display);
     justify-content: center;
     align-items: center;
 }
@@ -549,7 +555,7 @@ button a:hover {
 }
 
 .buy-sell .prop-display {
-    display: flex;
+    display: var(--flex-display);
     padding: 0 10%;
     justify-content: space-between;
     flex-wrap: wrap;
