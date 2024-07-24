@@ -46,3 +46,9 @@ async function getLease(){
 }
 
 const leaseData = getLease();
+
+const salesCard = document.querySelector(".prop-tab")
+
+salesData.forEach(data =>{
+    
+})
