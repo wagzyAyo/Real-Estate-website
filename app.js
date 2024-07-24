@@ -9,10 +9,9 @@ async function getSales() {
         return data
     } catch (err) {
         console.log(err)
+        return []
     }
 }
-
-const salesData = getSales();
 
 async function getRent(){
     try {
@@ -25,11 +24,10 @@ async function getRent(){
     return data
     } catch (err) {
         console.log(err)
+        return []
     }
     
 }
-
-const rentData = getRent();
 
 async function getLease(){
     try {
@@ -42,13 +40,63 @@ async function getLease(){
         return data
     } catch (err) {
         console.log(err)
+        return []
     }
 }
 
-const leaseData = getLease();
 
-const salesCard = document.querySelector(".prop-tab")
 
-salesData.forEach(data =>{
+
+async function displaySales(){
+    const salesData = await getSales()
+    const salesCardContainer = document.querySelector(".prop-display");
+
+    salesData.forEach(data =>{
+        //create new card
+        const card = document.createElement("div");
+        card.classList.add("prop-tab");
     
-})
+        //create and set content of the image
+        const imgDiv = document.createElement("div");
+        imgDiv.classList.add("prop-img");
+        const img = document.createElement("img");
+        img.src = data.imageURL;
+        img.alt = "";
+        img.style.width = "232px";
+        img.style.height = "184px";
+        img.style.borderRadius = "20px 20px 0 0";
+        imgDiv.appendChild(img)
+    
+        //create and set content for the feature
+        const featuresDiv = document.createElement("div");
+        featuresDiv.classList.add("features");
+        const nameDiv = document.createElement("div");
+        nameDiv.classList.add()
+        const priceDiv = document.createElement("div");
+        priceDiv.classList.add("price");
+        priceDiv.innerHTML = `<span>#</span>${data.amount}`;
+        const line1 = document.createElement("div");
+        line1.classList.add("line");
+        const sizeP = document.createElement("p");
+        sizeP.textContent = data.size;
+        const line2 = document.createElement("div");
+        line2.classList.add("line");
+        const locationB = document.createElement("b");
+        locationB.textContent = data.location;
+        featuresDiv.append(priceDiv, line1, sizeP, line2, locationB);
+    
+        // Create and set the content for the details
+        const detailsDiv = document.createElement("div");
+        detailsDiv.classList.add("details");
+        const detailsP = document.createElement("p");
+        detailsP.textContent = data.short;
+        detailsDiv.appendChild(detailsP);
+    
+        // Append all created elements to the card
+        card.append(imgDiv, featuresDiv, detailsDiv);
+    
+        // Append the card to the container
+        salesCardContainer.appendChild(card);
+    })
+}
+displaySales()
