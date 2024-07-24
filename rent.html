@@ -12,9 +12,45 @@
   />
 </head>
 <body>
-    <div >
-        <!-- <button onclick="getSales()">getSales</button> -->
+    <!-------------------This is the navbar section--------------------------->
+    <section class="nav-bar">
+        <div class="nav">
+          <div class="logo"> <a href="index.html"> <img src="assets/logo.png"  alt="logo" style="height: 34px; width: 64px;" > 
+          </a> </div> 
+          <div class="desk-link">
+          <ul>
+            <li>
+                <i class="fa-solid fa-xmark" onclick="closeMenu()" id="close"></i>
+                <a href="sales.html">Buy</a>
+                <a href="rent.html">Rent</a>
+                <a href="lease.html">Lease</a>
+                <a href="about.html">About</a>
+                <a href="" ><button class="sec-btn focus" >Contact Us</button></a>
+            </li>
+        </ul>
     </div>
+    <div class="menu">
+        <i class="fa-solid fa-bars" onclick="openMenu()" id="open"></i>
+    </div>
+</div>
+       
+            <div class="nav-links " id="navMenu">
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-xmark" onclick="closeMenu()" id="close"></i>
+                        <a href="sales.html">Buy</a>
+                        <a href="rent.html">Rent</a>
+                        <a href="lease.html">Lease</a>
+                        <a href="about.html">About</a>
+                        <a href="Contact.html " ><button class="sec-btn focus" >Contact Us</button></a>
+                    </li>
+                </ul>
+               
+            </div>
+           
+        
+
+    </section>
     <script src="app.js" lang="text/javascript"></script>
 </body>
 </html>
