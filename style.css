@@ -340,7 +340,7 @@ button a:hover {
 .title {
     display: grid;
     place-content: center;
-    margin-top: 55px;
+    margin-top: 4em;
 }
 
 .prop-display {
