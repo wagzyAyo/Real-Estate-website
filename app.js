@@ -205,7 +205,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             const imgURL = data.imageURL;
             imgURL.forEach(imgData =>{
                 const imgDiv = document.createElement("div");
-                imgDiv.classList.add("prop-img");
+                imgDiv.classList.add("swiper-slide", "prop-img");
                 const img = document.createElement("img");
                 img.src = imgData;
                 img.alt = "";
@@ -221,18 +221,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
             swiperDiv.append(swiperWrapper, swiperPagination)
 
-            // //create and set content of the image
-            // const imgDiv = document.createElement("div");
-            // imgDiv.classList.add("prop-img");
-            // const img = document.createElement("img");
-            // img.src = data.imageURL;
-            // img.alt = "";
-            // img.style.width = "232px";
-            // img.style.height = "184px";
-            // img.style.borderRadius = "20px 20px 0 0";
-            // img.style.objectFit = "cover"
-            // imgDiv.appendChild(img)
-        
             //create and set content for the feature
             const featuresDiv = document.createElement("div");
             featuresDiv.classList.add("features");
@@ -263,7 +251,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
         
             // Append the card to the container
             leaseCardContainer.appendChild(card);
-        })
+        });
+        
     }
     displayLease();
 
