@@ -272,16 +272,28 @@ document.addEventListener("DOMContentLoaded", ()=>{
             card.classList.add("prop-tab");
         
             //create and set content of the image
-            const imgDiv = document.createElement("div");
-            imgDiv.classList.add("prop-img");
-            const img = document.createElement("img");
-            img.src = data.imageURL;
-            img.alt = "";
-            img.style.width = "232px";
-            img.style.height = "184px";
-            img.style.borderRadius = "20px 20px 0 0";
-            img.style.objectFit = "cover"
-            imgDiv.appendChild(img)
+            const swiperDiv = document.createElement("div");
+            swiperDiv.classList.add("swiper");
+            const swiperWrapper = document.createElement("div");
+            swiperWrapper.classList.add("swiper-wrapper");
+            const imgURL = data.imageURL;
+            imgURL.forEach(imgData =>{
+                const imgDiv = document.createElement("div");
+                imgDiv.classList.add("swiper-slide", "prop-img");
+                const img = document.createElement("img");
+                img.src = imgData;
+                img.alt = "";
+                img.style.width = "100%";
+                img.style.height = "100%";
+                img.style.borderRadius = "20px 20px 0 0";
+                img.style.objectFit = "cover"
+                imgDiv.append(img)
+                swiperWrapper.append(imgDiv)
+            })
+            const swiperPagination = document.createElement("div");
+            swiperPagination.classList.add("swiper-pagination")
+
+            swiperDiv.append(swiperWrapper, swiperPagination)
         
             //create and set content for the feature
             const featuresDiv = document.createElement("div");
@@ -309,7 +321,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             detailsDiv.appendChild(detailsP);
         
             // Append all created elements to the card
-            card.append(imgDiv, featuresDiv, detailsDiv);
+            card.append(swiperDiv, featuresDiv, detailsDiv);
         
             // Append the card to the container
             recentCardContainer.appendChild(card);
