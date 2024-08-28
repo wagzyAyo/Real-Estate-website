@@ -183,77 +183,99 @@ document.addEventListener("DOMContentLoaded", ()=>{
     }
     displayRent();
     
-    async function displayLease(){
-        const leaseData = await getLease()
+    async function displayLease() {
+        const leaseData = await getLease();
         const leaseCardContainer = document.querySelector(".lease-props");
     
-        if (!leaseCardContainer){
-            console.log("cant find lease-props class ")
-            return
+        if (!leaseCardContainer) {
+            console.log("can't find lease-props class ");
+            return;
         }
     
-        leaseData.forEach(data =>{
-            //create new card
+        leaseData.forEach(data => {
+            // Create new card
             const card = document.createElement("div");
             card.classList.add("prop-tab");
     
-
             const swiperDiv = document.createElement("div");
             swiperDiv.classList.add("swiper");
+    
             const swiperWrapper = document.createElement("div");
             swiperWrapper.classList.add("swiper-wrapper");
+    
             const imgURL = data.imageURL;
-            imgURL.forEach(imgData =>{
+            imgURL.forEach(imgData => {
                 const imgDiv = document.createElement("div");
-                imgDiv.classList.add("swiper-slide", "prop-img");
+                imgDiv.classList.add("swiper-slide");
                 const img = document.createElement("img");
                 img.src = imgData;
                 img.alt = "";
                 img.style.width = "100%";
                 img.style.height = "100%";
                 img.style.borderRadius = "20px 20px 0 0";
-                img.style.objectFit = "cover"
-                imgDiv.append(img)
-                swiperWrapper.append(imgDiv)
-            })
+                img.style.objectFit = "cover";
+                imgDiv.append(img);
+                swiperWrapper.append(imgDiv);
+            });
+    
             const swiperPagination = document.createElement("div");
-            swiperPagination.classList.add("swiper-pagination")
-
-            swiperDiv.append(swiperWrapper, swiperPagination)
-
-            //create and set content for the feature
+            swiperPagination.classList.add("swiper-pagination");
+    
+            swiperDiv.append(swiperWrapper, swiperPagination);
+    
+            // Create and set content for the feature
             const featuresDiv = document.createElement("div");
             featuresDiv.classList.add("features");
+    
             const nameDiv = document.createElement("div");
-            nameDiv.classList.add()
+            nameDiv.classList.add();  // This is incomplete and needs fixing if required
+    
             const priceDiv = document.createElement("div");
             priceDiv.classList.add("price");
             priceDiv.innerHTML = `<span>#</span>${data.amount}`;
+    
             const line1 = document.createElement("div");
             line1.classList.add("line");
+    
             const sizeP = document.createElement("p");
             sizeP.textContent = data.size;
+    
             const line2 = document.createElement("div");
             line2.classList.add("line");
+    
             const locationB = document.createElement("b");
             locationB.textContent = data.location;
+    
             featuresDiv.append(priceDiv, line1, sizeP, line2, locationB);
-        
+    
             // Create and set the content for the details
             const detailsDiv = document.createElement("div");
             detailsDiv.classList.add("details");
+    
             const detailsP = document.createElement("p");
             detailsP.textContent = data.short;
             detailsDiv.appendChild(detailsP);
-        
+    
             // Append all created elements to the card
             card.append(swiperDiv, featuresDiv, detailsDiv);
-        
+    
             // Append the card to the container
             leaseCardContainer.appendChild(card);
         });
-        
+    
+        // Initialize Swiper after creating the elements
+        new Swiper('.swiper', {
+            direction: 'horizontal',
+            slidesPerView: 1,
+            spaceBetween: 10,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+        });
     }
+    
     displayLease();
 
 
@@ -326,6 +348,16 @@ document.addEventListener("DOMContentLoaded", ()=>{
             // Append the card to the container
             recentCardContainer.appendChild(card);
         })
+        // Initialize Swiper after creating the elements
+        new Swiper('.swiper', {
+            direction: 'horizontal',
+            spaceBetween: 10,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+        });
     }
     displayRecentData();
 })
