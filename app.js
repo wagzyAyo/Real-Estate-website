@@ -351,6 +351,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
         // Initialize Swiper after creating the elements
         new Swiper('.swiper', {
             direction: 'horizontal',
+            slidesPerView: 1,
+            slidesPerGroup: 1,
             spaceBetween: 10,
             loop: true,
             pagination: {
@@ -359,5 +361,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             },
         });
     }
-    displayRecentData();
+    displayRecentData()
+
 })
+
