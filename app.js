@@ -1,6 +1,6 @@
 async function getSales() {
     try {
-        const response = await fetch("http://localhost:3000/api/sales");
+        const response = await fetch("https://admin-dashboard-308c.onrender.com/api/sales");
         if(response.status !== 200){
             return 'No data available, check back later'
         }
@@ -15,7 +15,7 @@ async function getSales() {
 
 async function getRent(){
     try {
-        const response = await fetch("http://localhost:3000/api/rent");
+        const response = await fetch("https://admin-dashboard-308c.onrender.com/api/rent");
     if(response.status !== 200){
         return "No data availbale, check back later"
     }
@@ -31,7 +31,7 @@ async function getRent(){
 
 async function getLease(){
     try {
-        const response = await fetch("http://localhost:3000/api/lease");
+        const response = await fetch("https://admin-dashboard-308c.onrender.com/api/lease");
         if(response.status !== 200){
             return "No data availble,check back later"
         }
@@ -46,7 +46,7 @@ async function getLease(){
 
 async function getRecentData(){
     try {
-     const response  = await fetch("http://localhost:3000/api/alldata");
+     const response  = await fetch("https://admin-dashboard-308c.onrender.com/api/alldata");
      if (response.status !== 200){
         console.log( "No data available check back later");
         return []
