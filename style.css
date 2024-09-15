@@ -355,7 +355,7 @@ button a:hover {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 0 15%;
 }
 
@@ -556,7 +556,7 @@ button a:hover {
 .buy-sell .prop-display {
     display: var(--flex-display);
     padding: 0 10%;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     gap: 1em;
 }
