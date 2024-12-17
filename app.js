@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             card.append(swiperDiv, featuresDiv, detailsDiv);
         
             // Append the card to the container
-            salesCardContainer.appendChild(card);
+            CardContainer.appendChild(card);
 
              // Initialize Swiper after creating the elements
         new Swiper('.swiper', {
