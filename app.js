@@ -1,6 +1,6 @@
-async function getSales() {
+async function getData(link){
     try {
-        const response = await fetch("https://admin-dashboard-next-jade.vercel.app/api/sales");
+        const response = await fetch(link);
         if(response.status !== 200){
             return 'No data available, check back later'
         }
@@ -13,52 +13,21 @@ async function getSales() {
     }
 }
 
+async function getSales() {
+   return await getData("https://admin-dashboard-next-jade.vercel.app/api/sales")
+}
+
 async function getRent(){
-    try {
-        const response = await fetch("https://admin-dashboard-next-jade.vercel.app/api/rent");
-    if(response.status !== 200){
-        return "No data availbale, check back later"
-    }
-    const data = await response.json();
-    //console.log(data);
-    return data
-    } catch (err) {
-        console.log(err)
-        return []
-    }
-    
+   return await getData("https://admin-dashboard-next-jade.vercel.app/api/rent")
 }
 
 async function getLease(){
-    try {
-        const response = await fetch("https://admin-dashboard-next-jade.vercel.app/api/lease");
-        if(response.status !== 200){
-            return "No data availble,check back later"
-        }
-        const data = await response.json()
-        //console.log(data);
-        return data
-    } catch (err) {
-        console.log(err)
-        return []
-    }
+   return await getData("https://admin-dashboard-next-jade.vercel.app/api/lease")
 };
 
 async function getRecentData(){
-    try {
-     const response  = await fetch("https://admin-dashboard-next-jade.vercel.app/api/recent");
-     if (response.status !== 200){
-        console.log( "No data available check back later");
-        return []
-     }
-     const data = await response.json();
-     return data;
-    } catch (err) {
-        console.log(err)
-        return []
-    }
+  return await getData("https://admin-dashboard-next-jade.vercel.app/api/recent")
 };
-
 
 
 
