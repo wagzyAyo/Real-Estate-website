@@ -68,11 +68,7 @@ li a {
     transition: 1s ease-in-out;
 }
 
-li a:hover {
-    font-weight: bold;
-}
-
-.current {
+.current, li a:hover {
     font-weight: bold;
     border: none;
 }
